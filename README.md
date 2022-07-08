@@ -10,4 +10,4 @@ I created this app to teach myself how to allow users to mint an NFT while simul
 
 3. I built and deployed the basic NFT contract which inherits from the ERC721 standard, ERC721URIStorage, and Ownable contracts. Check it out at Goerli's Etherscan: Link
 
-Go ahead and mint some NFTs for yourself! mkrasne2.github.io/nft-minter/
+Go ahead and mint some NFTs for yourself! https://mkrasne2.github.io/nft-minter/ 
