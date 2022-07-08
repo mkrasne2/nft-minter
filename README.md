@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Quick Notes about this Project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I created this app to teach myself how to allow users to mint an NFT while simultaneously using IPFS as a means to store NFT attributes. A one-stop shop.
 
 ## Available Scripts
 
