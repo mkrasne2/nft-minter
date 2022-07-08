@@ -74,7 +74,7 @@ function Collection() {
   pushC.push(<CardExample />);
 
   const settings = {
-    apiKey: "HT5oTfLdGZPxoBIxZhpyc4ODbYyYZ1G8", // Replace with your Alchemy API Key.
+    apiKey: "<my key hidden>", // Replace with your Alchemy API Key.
     network: Network.ETH_GOERLI, // Replace with your network.
     maxRetries: 10,
   };
