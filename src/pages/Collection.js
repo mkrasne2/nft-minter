@@ -41,6 +41,7 @@ function Collection() {
     return (
       
         <MDBCard style={{ width: "33%" }}>
+          <div className = 'format-items'>
           <div className ='img-styles'>
           <MDBCardImage className="img-new" src={props.image}waves />
           </div>
@@ -53,6 +54,7 @@ function Collection() {
             <MDBBtn color="dark" onClick = { thisFunc }> View NFT ID# {props.location}</MDBBtn>
             </div>
           </MDBCardBody>
+          </div>
         </MDBCard>
       
     )
@@ -114,7 +116,7 @@ function Collection() {
         console.log(account);
         const nftsForOwner = await getNftsForOwner(alchemy, account);
         if(nftsForOwner.ownedNfts.length > 0){
-          for(let i = 0; i < nftsForOwner.ownedNfts.length - 1; i++){
+          for(let i = nftsForOwner.ownedNfts.length - 1; i > 0; i--){
             var element = {};
             let check = await nftsForOwner.ownedNfts[i].title;
             if(check.length > 0){
@@ -132,6 +134,8 @@ function Collection() {
           console.log(newc);
           console.log(fillData);
           setData(fillData);
+        } else {
+          setData(1);
         }
         console.log(fillData);
         return;
@@ -178,6 +182,14 @@ if(card){
   )
 }
    if(data) {
+     if(data == 1){
+       return(
+         <p>You have no NFTs to view...yet</p>
+       )
+     }
+     else{
+
+     
     return(
       <div className = 'final'>
      <div className='check'>
@@ -205,7 +217,7 @@ if(card){
             </div>
             </div>
     )
-  
+  }
   
 }
 else if(!(connected)){
